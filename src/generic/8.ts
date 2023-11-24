@@ -17,8 +17,8 @@ type Form = {
   phone: string | null;
   errors: Errors;
 };
-
+type FormWithoutError = Omit<Form, 'errors'>;
 // Реалізуйте Params так, щоб унеможливити поле 'errors' з типу Form
-type Params = Form;
+type Params = FormWithoutError;
 
 export {};
