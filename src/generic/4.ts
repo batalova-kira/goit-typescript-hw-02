@@ -11,7 +11,7 @@ interface Title {
     title: string;
 }
 
-class Page<T extends Title> extends Component<T> {
+class Page extends Component<Title> {
   pageInfo() {
     console.log(this.props.title);
   }
